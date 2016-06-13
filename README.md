@@ -3,7 +3,7 @@ DaTiCh (Date Time Changer) does what it does .. to change the datetime.
 
 Please pull the documentation for more information: [Documentation](documentation/html)
 
-With DaTiCh, a shorten for DateTimeChanger, its possible to change/receive the system datetime. Furthermore it can act as a standalone app like the gui implementation of the operating system. The features will be a complete control over the appearance of the clock/calender.
+With DaTiCh, a shorten for DateTimeChanger, it's possible to change/receive the system datetime. Furthermore it can act as a standalone app like the gui implementation of the operating system. The features will be a complete control over the appearance of the clock/calender.
 
 
 ## Features

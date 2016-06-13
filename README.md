@@ -17,7 +17,7 @@ With DaTiCh, a shorten for DateTimeChanger, its possible to change/receive the s
 - ![alt tag](https://github.com/SkullbocksDE/DaTiCh/blob/master/documentation/images/tray.png)
 
 ## Qt
-The application is writting under Qt5.X. It uses the Qt Resource System, QSplashScreen, QSystemTrayIcon, Qt Examples and other Qt things.
+The application is written under Qt5.X. It uses the Qt Resource System, QSplashScreen, QSystemTrayIcon, Qt Examples and other Qt things.
 
 ## Languages
 Currently there are two languages available: German and English-UK The 'language' folder contains a 'source-to-ts.bat' and a 'ts-to-qm.bat'. You can use them to easily generate the ts-files from the project file and the qm-files from the ts-files. You can also load the project file within Qt Creator and navigate to Tools -> Extern -> Linguist If you are using the bat-files remember that you need to change the Qt path to your system environment.

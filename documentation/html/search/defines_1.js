@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['default_5fclock_5fhourhand_5fcolor',['DEFAULT_CLOCK_HOURHAND_COLOR',['../m__clockstruct_8h.html#a4b7efc93b3fe4656d7cd6fb8a3e214e9',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fhourhand_5fvisible',['DEFAULT_CLOCK_HOURHAND_VISIBLE',['../m__clockstruct_8h.html#a05cdc5a33522f2e829f1b287b2362433',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fhourtick_5fcolor',['DEFAULT_CLOCK_HOURTICK_COLOR',['../m__clockstruct_8h.html#aec97d7d4f0b9c7f8914ff6f74f2b3d00',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fhourtick_5fvisible',['DEFAULT_CLOCK_HOURTICK_VISIBLE',['../m__clockstruct_8h.html#aa30e2f5fffe696aafba28b22d3efe5a2',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fminutehand_5fcolor',['DEFAULT_CLOCK_MINUTEHAND_COLOR',['../m__clockstruct_8h.html#a51d9f7fa8446c8c1f44a37f19177f8c2',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fminutehand_5fvisible',['DEFAULT_CLOCK_MINUTEHAND_VISIBLE',['../m__clockstruct_8h.html#a9be9a155e19b13e15e983a6df8dc6498',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fminutetick_5fcolor',['DEFAULT_CLOCK_MINUTETICK_COLOR',['../m__clockstruct_8h.html#a91fececa6ba547441a383918bfa2dc5d',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fminutetick_5fvisible',['DEFAULT_CLOCK_MINUTETICK_VISIBLE',['../m__clockstruct_8h.html#a063725a9b77fc1f571dd2fe1eeeac1cc',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fsecondhand_5fcolor',['DEFAULT_CLOCK_SECONDHAND_COLOR',['../m__clockstruct_8h.html#a937a2e556ef56f7f7d9f669968fb690a',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fsecondhand_5fvisible',['DEFAULT_CLOCK_SECONDHAND_VISIBLE',['../m__clockstruct_8h.html#a2a24b8b99c1d3cdd25d76e141c680009',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fsecondtick_5fcolor',['DEFAULT_CLOCK_SECONDTICK_COLOR',['../m__clockstruct_8h.html#a8c698bac0bd1c26ad8bb4e5741e6e39a',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fsecondtick_5fvisible',['DEFAULT_CLOCK_SECONDTICK_VISIBLE',['../m__clockstruct_8h.html#aed2ea2e6bed29d8cc95049420159e618',1,'m_clockstruct.h']]],
+  ['default_5fclock_5fvisible',['DEFAULT_CLOCK_VISIBLE',['../m__clockstruct_8h.html#ae1b5bb7cd8beb69d8ca08357857ab7f9',1,'m_clockstruct.h']]],
+  ['default_5fcolorbutton_5fcolor',['DEFAULT_COLORBUTTON_COLOR',['../m__colorbutton_8h.html#a7d698dbc30f0eb3db59346fed8c79443',1,'m_colorbutton.h']]],
+  ['default_5fconsole_5fbackground_5fcolor',['DEFAULT_CONSOLE_BACKGROUND_COLOR',['../m__consoleappearance_8h.html#a9f38c822f39503319abd9f88954e0fad',1,'m_consoleappearance.h']]],
+  ['default_5fconsole_5fdebugging_5fenabled',['DEFAULT_CONSOLE_DEBUGGING_ENABLED',['../m__consolearguments_8h.html#ae999e0f0294c2334879a012c78eeff00',1,'m_consolearguments.h']]],
+  ['default_5fconsole_5fdisplay_5fhelp',['DEFAULT_CONSOLE_DISPLAY_HELP',['../m__consolearguments_8h.html#a75cfbc3c9687e9f4ceba29016e2d5d72',1,'m_consolearguments.h']]],
+  ['default_5fconsole_5ffont',['DEFAULT_CONSOLE_FONT',['../m__consoleappearance_8h.html#a4531240625b6a60978effea05ded5011',1,'m_consoleappearance.h']]],
+  ['default_5fconsole_5fgui_5fvisible',['DEFAULT_CONSOLE_GUI_VISIBLE',['../m__consolearguments_8h.html#a31ca2a4456c26ee08ca23f248f3fe724',1,'m_consolearguments.h']]],
+  ['default_5fconsole_5fmenu_5fvisible',['DEFAULT_CONSOLE_MENU_VISIBLE',['../m__consolearguments_8h.html#a17be0ddee3146eeef4a1d743e1b413f4',1,'m_consolearguments.h']]],
+  ['default_5fconsole_5ftext_5fcolor',['DEFAULT_CONSOLE_TEXT_COLOR',['../m__consoleappearance_8h.html#ab018d611dbca3068bf3bd59a262e23bd',1,'m_consoleappearance.h']]],
+  ['default_5fsplash_5fskipable',['DEFAULT_SPLASH_SKIPABLE',['../m__splashscreen_8h.html#a601059d426ebb213c457d7748450945d',1,'m_splashscreen.h']]],
+  ['default_5fsplash_5ftimer_5fms',['DEFAULT_SPLASH_TIMER_MS',['../m__splashscreen_8h.html#a6e8d58bbbda3dbfb3f3d9bf06ce30739',1,'m_splashscreen.h']]],
+  ['default_5fsplash_5ftransparency_5ftimer_5fms',['DEFAULT_SPLASH_TRANSPARENCY_TIMER_MS',['../m__splashscreen_8h.html#ac87904928569e56fa3c2a7b924b40d29',1,'m_splashscreen.h']]]
+];

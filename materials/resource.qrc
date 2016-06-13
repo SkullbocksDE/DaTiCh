@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="calendar">images/calendar.png</file>
+        <file alias="clock">images/clock.png</file>
+        <file alias="options">images/options.png</file>
+        <file alias="arrow_down">images/arrow-down.png</file>
+        <file alias="arrow_right">images/arrow-right.png</file>
+        <file alias="eye">images/eye.png</file>
+        <file alias="color">images/color.png</file>
+        <file alias="image">images/image.png</file>
+        <file alias="settings">images/settings.png</file>
+        <file alias="format">images/format.png</file>
+        <file alias="appicon">images/appicon.png</file>
+        <file alias="exit">images/exit.png</file>
+        <file alias="wizard">images/wizard.png</file>
+    </qresource>
+</RCC>

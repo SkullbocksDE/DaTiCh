@@ -1,0 +1,49 @@
+#ifndef M_APPLICATIONVERSION_DEFINES_H
+#define M_APPLICATIONVERSION_DEFINES_H
+
+#define APPVER_ID_STR                  "16-01" /* AppID ist fuer Updates gut, weil auf die AppID bei der Installation referenziert wird */
+
+#define APPVER_MAJORVERSION            0
+#define APPVER_MINORVERSION            1
+#define APPVER_RELEASEVERSION          0
+#define APPVER_BUILDVERSION            0
+
+#define APPVER_PRODUCTVERSION          APPVER_MAJORVERSION,APPVER_MINORVERSION,APPVER_RELEASEVERSION,APPVER_BUILDVERSION
+#define APPVER_PRODUCTVERSION_STR      "0.1.0.0"
+
+#define APPVER_FILEVERSION             APPVER_PRODUCTVERSION
+#define APPVER_FILEVERSION_STR         APPVER_PRODUCTVERSION_STR
+
+#define APPVER_PRODUCTNAME_STR         "DaTiCh"
+#define APPVER_INTERNALNAME_STR        "DaTiCh"
+//#define APPVER_PRODUCTSUBNAME_STR      ""   /* auskommentieren, wenn nicht benoetigt */
+#define APPVER_FILEDESCRIPTION_STR     "Date Time Changer"
+#define APPVER_ORIGINALFILENAME_STR    "DaTiCh.exe"
+#define APPVER_ARCHITECTURE_STR        "x86"
+#define APPVER_OS_STR                  "win"
+#define APPVER_LANGUAGE_STR            "i18n"
+
+#ifndef APPVER_PRODUCTSUBNAME_STR
+#define APPVER_FULLPRODUCTNAME_STR     APPVER_PRODUCTNAME_STR+" "+APPVER_PRODUCTVERSION_STR
+#define APPVER_INSTALLERNAME_STR       "Setup_"+APPVER_PRODUCTNAME_STR+"_"+APPVER_PRODUCTVERSION_STR+"_"+APPVER_ID_STR+"_"+APPVER_OS_STR+"_"+APPVER_ARCHITECTURE_STR+"_"+APPVER_LANGUAGE_STR
+#else
+#define APPVER_FULLPRODUCTNAME_STR     APPVER_PRODUCTNAME_STR+" "+APPVER_PRODUCTSUBNAME_STR+" "+APPVER_PRODUCTVERSION_STR
+#define APPVER_INSTALLERNAME_STR       "Setup_"+APPVER_PRODUCTNAME_STR+"_"+APPVER_PRODUCTSUBNAME_STR+"_"+APPVER_PRODUCTVERSION_STR+"_"+APPVER_ID_STR+"_"+APPVER_OS_STR+"_"+APPVER_ARCHITECTURE_STR+"_"+APPVER_LANGUAGE_STR
+#endif
+
+#define APPVER_PRIVATEBUILD_STR        ""  /* see APPVER_FILEFLAGS, example = Built by TESTER1 on \TESTBED */
+#define APPVER_SPECIALBUILD_STR        ""  /* see APPVER_FILEFLAGS, example = Private build for TESTER1 solving mouse problems on M250 and M250E computers */
+
+#define APPVER_COMPANYNAME_STR         "Mike Knappe"
+#define APPVER_COMPANYPHONE_STR        "+49 (0) 160 / 98457373"
+#define APPVER_COMPANYFAX_STR          "+49 (0) 160 / 98457373"
+#define APPVER_COMPANYSTREET_STR       "Stifterstraße 16"
+#define APPVER_COMPANYCITY_STR         "07743 Jena"
+#define APPVER_COMPANYDOMAIN_STR       "skullbocks.de"
+#define APPVER_COMPANYMAIL_STR         "info@skullbocks.de"
+#define APPVER_COMPANYURL_STR          "http://www.skullbocks.de"
+#define APPVER_LEGALCOPYRIGHT_STR      "2016 Mike Knappe"
+#define APPVER_LEGALTRADEMARKS1_STR    "All Rights Reserved"
+#define APPVER_LEGALTRADEMARKS2_STR    "Developed with Qt Creator 3.6.1.\nBased on Qt 5.6.0 (Rev. d502727b2c).\nLicensed unter LGPL v.3.0."
+
+#endif // M_APPLICATIONVERSION_DEFINES_H

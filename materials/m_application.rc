@@ -1,0 +1,37 @@
+#include <windows.h>
+#include "m_applicationversion_defines.h"
+
+IDI_ICON1 ICON DISCARDABLE "appicon.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     APPVER_FILEVERSION
+PRODUCTVERSION  APPVER_PRODUCTVERSION
+FILEOS         	VOS__WINDOWS32
+FILETYPE       	VFT_APP /* VFT_STATIC_LIB VFT_DLL VFT_DRV */
+FILEFLAGS		VS_FF_DEBUG /* VS_FF_PATCHED VS_FF_PRERELEASE VS_FF_PRIVATEBUILD VS_FF_SPECIALBUILD */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName",        APPVER_COMPANYNAME_STR
+            VALUE "FileDescription",    APPVER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",        APPVER_FILEVERSION_STR
+            VALUE "InternalName",       APPVER_INTERNALNAME_STR
+            VALUE "LegalCopyright",     APPVER_LEGALCOPYRIGHT_STR
+            VALUE "LegalTrademarks1",   APPVER_LEGALTRADEMARKS1_STR
+            VALUE "LegalTrademarks2",   APPVER_LEGALTRADEMARKS2_STR
+            VALUE "OriginalFilename",   APPVER_ORIGINALFILENAME_STR
+            VALUE "ProductName",        APPVER_PRODUCTNAME_STR
+            VALUE "ProductVersion",     APPVER_PRODUCTVERSION_STR
+			VALUE "PrivateBuild",		APPVER_PRIVATEBUILD_STR
+			VALUE "SpecialBuild",		APPVER_SPECIALBUILD_STR
+        END
+    END
+
+    BLOCK "VarFileInfo"
+	/* 0x0809 = UK; 0x409 = US; 0x0407 = German; 0x0 = Multilingual */ /* , */ /* 1200 = Unicode; 1250 = Latin-2; 1252 = Multilingual */
+    BEGIN
+        VALUE "Translation", 0x0, 1252
+    END
+END

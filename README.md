@@ -23,10 +23,10 @@ The application is written under Qt5.X. It uses the Qt Resource System, QSplashS
 Currently there are two languages available: German and English-UK The 'language' folder contains a 'source-to-ts.bat' and a 'ts-to-qm.bat'. You can use them to easily generate the ts-files from the project file and the qm-files from the ts-files. You can also load the project file within Qt Creator and navigate to Tools -> Extern -> Linguist If you are using the bat-files remember that you need to change the Qt path to your system environment.
 
 ## Installation
-To create a setup file of the executeable application file and its DLLs you will find a folder named 'installer'. This folder contains a file called 'Installer.iss' which is a configuration file for InnoSetup. You can use this file to generate your setup file.
+To create a setup file of the executeable application file and its DLLs you will find a folder named 'installer'. This folder contains a file called 'Installer.iss' which is a configuration file for [InnoSetup](http://www.jrsoftware.org/isinfo.php). You can use this file to generate your setup file.
 
 ## Documentation
-The documentation was created by using Doxygen. The project itself has a folder named 'documentation'. The folder contains a file named DoxyGenfile which is a configuration file for Doxygen. You can recreate or change the documentation by using this file or the created bat-file. The bat-file will help you a bit to create the documentation more easily. If you are using the DoxyGenfile remember to change the following variables to your system environment:
+The documentation was created by using [Doxygen](http://www.stack.nl/~dimitri/doxygen/). The project itself has a folder named 'documentation'. The folder contains a file named DoxyGenfile which is a configuration file for Doxygen. You can recreate or change the documentation by using this file or the created bat-file. The bat-file will help you a bit to create the documentation more easily. If you are using the DoxyGenfile remember to change the following variables to your system environment:
 - QHG_LOCATION
 - PROJECT_LOGO
 - INPUT

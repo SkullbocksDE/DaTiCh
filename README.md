@@ -1,6 +1,7 @@
 # DaTiCh
 DaTiCh (Date Time Changer) does what it does .. to change the datetime.
 
+![alt tag](https://github.com/SkullbocksDE/DaTiCh/blob/master/materials/images/appicon.png)
 Please pull the documentation for more information: [Documentation](documentation/html)
 
 With DaTiCh, a shorten for DateTimeChanger, it's possible to change/receive the system datetime. Furthermore it can act as a standalone app like the gui implementation of the operating system. The features will be a complete control over the appearance of the clock/calender.
@@ -44,3 +45,4 @@ The ToDo list of the DaTiCh project.
 - Create Unit-Tests
 - UNIX terminal script for Doxygen
 - Finish documentation
+- Add licenses

@@ -1,10 +1,13 @@
 #include "m_console.h"
 
-MConsole::MConsole( int argc, char *argv[] )
+MConsole::MConsole( int argc, char *argv[] ) : QObject( 0 )
 {
     if( argc >= 2 )
     {
         this->parseArguments( argc, argv );
+    }
+    else
+    {
     }
 }
 

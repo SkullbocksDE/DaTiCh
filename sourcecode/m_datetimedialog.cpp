@@ -2,59 +2,54 @@
 
 MDateTimeDialog::MDateTimeDialog( QWidget *parent ) : QDialog( parent )
 {
+    this->initClass( );
+}
+
+void MDateTimeDialog::initClass( )
+{
+    this->initObjects( );
+    this->initGuiElements( );
+    this->initLayout( );
+    this->initWindow( );
+    this->initLocale( );
+    this->initDefaultValues( );
+    this->initConnections( );
+}
+
+void MDateTimeDialog::initObjects( )
+{
+
+}
+
+void MDateTimeDialog::initGuiElements( )
+{
+
     optionsDialog = new MOptionsDialog( this );
     optionsButton = new QPushButton( this );
     optionsButton->setIcon( QIcon(":/images/options") );
-    localeLabel = new QLabel( tr("Locale"), this );
+    localeLabel = new QLabel( this );
     localeCombo = new QComboBox( this );
-    int curLocaleIndex = -1;
-    int index = 0;
-    for( int _lang = QLocale::C; _lang <= QLocale::LastLanguage; ++_lang )
-    {
-        QLocale::Language lang = static_cast<QLocale::Language>( _lang );
-        QList<QLocale::Country> countries = QLocale::countriesForLanguage( lang );
-        for( int i = 0; i < countries.count(); ++i )
-        {
-            QLocale::Country country = countries.at( i );
-            QString label = QLocale::languageToString( lang );
-            label += QLatin1Char( '/' );
-            label += QLocale::countryToString( country );
-            QLocale locale( lang, country );
-            if( this->locale().language() == lang && this->locale().country() == country )
-                curLocaleIndex = index;
-            localeCombo->addItem( label, locale );
-            ++index;
-        }
-    }
 
-    timeZoneLabel = new QLabel( tr("TimeZone"), this );
+    timeZoneLabel = new QLabel( this );
     timeZoneLabel->setVisible( false );
     timeZoneCombo = new QComboBox( this );
     timeZoneCombo->setVisible( false );
 
-    dateLabel = new QLabel( tr("Date"), this );
+    dateLabel = new QLabel( this );
     dateEdit = new QDateEdit( this );
-    timeLabel = new QLabel( tr("Time"), this );
+    timeLabel = new QLabel( this );
     calendar = new QCalendarWidget( this );
     calendar->setGridVisible( true );
     timeEdit = new QTimeEdit( this );
     timeEdit->setDisplayFormat( "hh:mm:ss" );
     utcPlusLabel = new QLabel( this );
     analogClock = new AnalogClock( this );
-    okButton = new QPushButton( tr("OK"), this );
-    cancelButton = new QPushButton( tr("Cancel"), this );
+    okButton = new QPushButton( this );
+    cancelButton = new QPushButton( this );
+}
 
-    connect( okButton, SIGNAL(clicked()), this, SLOT(accept()) );
-    connect( cancelButton, SIGNAL(clicked()), this, SLOT(reject()) );
-    connect( timeEdit, SIGNAL(timeChanged(QTime)), analogClock, SLOT(setCurrentTime(QTime)) );
-    connect( analogClock, SIGNAL(sendNewTime(QTime)), this, SLOT(setTime(QTime)) );
-    connect( calendar, SIGNAL(clicked(QDate)), dateEdit, SLOT(setDate(QDate)) );
-    connect( dateEdit, SIGNAL(dateChanged(QDate)), calendar, SLOT(setSelectedDate(QDate)) );
-    connect( localeCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(localeChanged(int)) );
-    connect( calendar, SIGNAL(currentPageChanged(int,int)), this, SLOT(reformatCalendarPage()) );
-    connect( timeZoneCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(refreshTimeZone(int)) );
-    connect( optionsButton, SIGNAL(clicked()), optionsDialog, SLOT(show()) );
-
+void MDateTimeDialog::initLayout( )
+{
     timeLayout = new QHBoxLayout;
     timeLayout->addWidget( timeLabel );
     timeLayout->addWidget( timeEdit );
@@ -74,13 +69,91 @@ MDateTimeDialog::MDateTimeDialog( QWidget *parent ) : QDialog( parent )
     mainLayout->addWidget( okButton, 100, 0 );
     mainLayout->addWidget( cancelButton, 100, 1 );
     this->setLayout( mainLayout );
+    setWindowFlags( Qt::Window /*| Qt::FramelessWindowHint*/ );
 
+//    setAttribute(Qt::WA_NoSystemBackground);
+//    setAttribute(Qt::WA_TranslucentBackground);
+//    setAttribute(Qt::WA_PaintOnScreen);
+
+//    setAttribute(Qt::WA_TransparentForMouseEvents);
+}
+
+void MDateTimeDialog::initWindow( )
+{
+//        this->setAttribute( Qt::WA_NoSystemBackground, true);
+//        this->setAttribute( Qt::WA_TranslucentBackground, true);
+//        this->setStyleSheet("background:transparent;");
+//        QPalette pal = this->palette();
+//        pal.setBrush(QPalette::Base, Qt::transparent);
+//        this->setPalette(pal);
+}
+
+void MDateTimeDialog::paintEvent( QPaintEvent *event )
+{
+    QDialog::paintEvent( event );
+//    QPixmap pixmap(size());
+//         pixmap.fill(Qt::transparent);
+//         QPainter p( this );
+//              p.drawPixmap(0,0,pixmap);
+//         setMask(pixmap.mask());
+}
+
+void MDateTimeDialog::initConnections( )
+{
+    connect( okButton, SIGNAL(clicked()), this, SLOT(accept()) );
+    connect( cancelButton, SIGNAL(clicked()), this, SLOT(reject()) );
+    connect( timeEdit, SIGNAL(timeChanged(QTime)), analogClock, SLOT(setCurrentTime(QTime)) );
+    connect( analogClock, SIGNAL(sendNewTime(QTime)), this, SLOT(setTime(QTime)) );
+    connect( calendar, SIGNAL(clicked(QDate)), dateEdit, SLOT(setDate(QDate)) );
+    connect( dateEdit, SIGNAL(dateChanged(QDate)), calendar, SLOT(setSelectedDate(QDate)) );
+    connect( localeCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(localeChanged(int)) );
+    connect( calendar, SIGNAL(currentPageChanged(int,int)), this, SLOT(reformatCalendarPage()) );
+    connect( timeZoneCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(refreshTimeZone(int)) );
+    connect( optionsButton, SIGNAL(clicked()), optionsDialog, SLOT(show()) );
+}
+
+
+void MDateTimeDialog::initLocale( )
+{
+    int curLocaleIndex = -1;
+    int index = 0;
+    for( int _lang = QLocale::C; _lang <= QLocale::LastLanguage; ++_lang )
+    {
+        QLocale::Language lang = static_cast<QLocale::Language>( _lang );
+        QList<QLocale::Country> countries = QLocale::countriesForLanguage( lang );
+        for( int i = 0; i < countries.count(); ++i )
+        {
+            QLocale::Country country = countries.at( i );
+            QString label = QLocale::languageToString( lang );
+            label += QLatin1Char( '/' );
+            label += QLocale::countryToString( country );
+            QLocale locale( lang, country );
+            if( this->locale().language() == lang && this->locale().country() == country )
+                curLocaleIndex = index;
+            localeCombo->addItem( label, locale );
+            ++index;
+        }
+    }
     if( curLocaleIndex != -1 )
         localeCombo->setCurrentIndex( curLocaleIndex );
+}
+
+void MDateTimeDialog::initDefaultValues( )
+{
     dateEdit->setDate( QDate::currentDate() );
     timeEdit->setTime( QTime::currentTime() );
     this->setHeaderTextStyle( "Bold" );
     this->reformatCalendarPage( );
+}
+
+void MDateTimeDialog::updateLanguage( )
+{
+    localeLabel->setText( tr("Locale") );
+    timeZoneLabel->setText( tr("TimeZone") );
+    dateLabel->setText( tr("Date") );
+    timeLabel->setText( tr("Time") );
+    okButton->setText( tr("OK") );
+    cancelButton->setText( tr("Cancel") );
 }
 
 void MDateTimeDialog::accept( )

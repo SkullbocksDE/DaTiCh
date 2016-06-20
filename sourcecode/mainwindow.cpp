@@ -19,7 +19,7 @@ void MainWindow::initObjects( )
 {
 
 }
-
+#include <QBitmap>
 void MainWindow::initGuiElements( )
 {
     this->menuBar();
@@ -42,11 +42,18 @@ void MainWindow::initGuiElements( )
     trayMenu->addAction( exitAction );
     trayIcon->setContextMenu( trayMenu );
     trayIcon->show( );
-
-    MDateTimeDialog dlg( this );
-    dlg.show();
-    dlg.setWindowFlags( Qt::Widget );
-    this->setCentralWidget( &dlg );
+//    this->setAttribute( Qt::WA_NoSystemBackground, true);
+//    this->setAttribute( Qt::WA_TranslucentBackground, true);
+//    this->setStyleSheet("background:transparent;");
+//    this->setWindowFlags( Qt::SplashScreen );
+//    QPalette pal = this->palette();
+//    pal.setBrush(QPalette::Base, Qt::transparent);
+//    this->setPalette(pal);
+    this->setAutoFillBackground(false);
+    QPixmap pixmap = this->grab();
+    this->setMask(pixmap.createHeuristicMask());
+    testWidget = new QWidget;
+    this->setCentralWidget( testWidget );
 }
 
 void MainWindow::initLayout( )
@@ -89,10 +96,28 @@ void MainWindow::keyPressEvent( QKeyEvent *event )
     if( event->modifiers().testFlag(Qt::AltModifier) == true )
     {
         if( this->menuBar()->isVisible() == true )
-            this->menuBar()->hide();
+        {
+            this->menuBar()->hide( );
+            this->setWindowFlags( Qt::SplashScreen );
+            this->show( );
+        }
         else
-            this->menuBar()->show();
+        {
+            this->menuBar()->show( );
+            this->setWindowFlags( Qt::Window );
+            this->show( );
+        }
     }
+}
+
+void MainWindow::paintEvent( QPaintEvent *event )
+{
+    QMainWindow::paintEvent( event );
+//    QPixmap pixmap(size());
+//         pixmap.fill(Qt::transparent);
+//         QPainter p( this );
+//              p.drawPixmap(0,0,pixmap);
+//         setMask(pixmap.mask());
 }
 
 void MainWindow::showWizard( )

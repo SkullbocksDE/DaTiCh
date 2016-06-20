@@ -29,12 +29,13 @@ public:
 
 public slots:
     void updateLanguage( );
+    void showWizard( );
 
 private slots:
-    void showWizard( );
 
 protected:
     void keyPressEvent( QKeyEvent *event );
+    void paintEvent( QPaintEvent *event );
 
 private:
     void initClass( );
@@ -45,6 +46,7 @@ private:
     void initDefaultValues( );
     void initConnections( );
 
+    QWidget *testWidget;
     QSystemTrayIcon *trayIcon;
     QMenu *trayMenu;
     QAction *showAction;

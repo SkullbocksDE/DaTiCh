@@ -18,8 +18,10 @@
  * @brief This class handles the given application arguments and gives a change to operate with the core functions of the application.
  * @details This class will filter the given arguments and decides what to do, to display the console menu or to debug the application.
  */
-class MConsole
+class MConsole : public QObject
 {
+
+    Q_OBJECT
 
 public:
     /**

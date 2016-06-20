@@ -58,6 +58,7 @@ public slots:
      * @return QTime Returns #currTime
      */
     QTime getCurrentTime( );
+    void updateLanguage( );
 
 private slots:
     /**
@@ -78,9 +79,21 @@ private slots:
     void refreshTimeZone( int index );
     void reformatCalendarPage( );
 
+protected:
+    void paintEvent( QPaintEvent *event );
+
 signals:
 
 private:
+    void initClass( );
+    void initObjects( );
+    void initGuiElements( );
+    void initLayout( );
+    void initWindow( );
+    void initLocale( );
+    void initDefaultValues( );
+    void initConnections( );
+
     QGridLayout *mainLayout;
     QPushButton *optionsButton;
     MOptionsDialog *optionsDialog;

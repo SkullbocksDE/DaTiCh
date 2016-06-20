@@ -24,7 +24,6 @@ int main( int argc, char *argv[] )
 
     if( console.getArguments().guiVisible == true )
     {
-
         QPixmap pixmap( ":/images/appicon" );
         MSplashScreen splash( pixmap );
         splash.setTimer( 3000 );
@@ -35,7 +34,7 @@ int main( int argc, char *argv[] )
         MainWindow mainWindow;
         mainWindow.show( );
         splash.finish( &mainWindow );
-
+        mainWindow.showWizard();
     }
 
     return application.exec( );

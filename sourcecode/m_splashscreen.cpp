@@ -86,7 +86,10 @@ void MSplashScreen::closeEvent( QCloseEvent *event )
     {
         event->ignore( );
         transparencyTimer.start( );
-        waitWidget->show( );
+        if( waitWidget != nullptr )
+        {
+            waitWidget->show( );
+        }
     }
 }
 
@@ -106,8 +109,11 @@ void MSplashScreen::skip( )
     transparency = 0;
     showing = false;
     this->setWindowOpacity( 0 );
-    waitWidget->setWindowOpacity( 255 );
-    waitWidget->show( );
+    if( waitWidget != nullptr )
+    {
+        waitWidget->setWindowOpacity( 255 );
+        waitWidget->show( );
+    }
     this->close( );
 }
 
@@ -140,7 +146,10 @@ void MSplashScreen::changeTransparency( )
     }
     else
     {
-        waitWidget->setWindowOpacity( 1 - transparency/255.0f );
+        if( waitWidget != nullptr )
+        {
+            waitWidget->setWindowOpacity( 1 - transparency/255.0f );
+        }
         this->setWindowOpacity( transparency/255.0f );
         transparency--;
         this->raise( );

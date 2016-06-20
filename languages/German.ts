@@ -335,7 +335,7 @@
     <message>
         <location filename="../sourcecode/m_console.cpp" line="75"/>
         <source>* Debugging enabled: %1</source>
-        <translation>* Debugging aktiv: %</translation>
+        <translation>* Debugging aktiv: %1</translation>
     </message>
     <message>
         <location filename="../sourcecode/m_console.cpp" line="75"/>
@@ -356,7 +356,7 @@
     <message>
         <location filename="../sourcecode/m_console.cpp" line="76"/>
         <source>* Display help: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>* Zeige Hilfe: %1</translation>
     </message>
     <message>
         <location filename="../sourcecode/m_console.cpp" line="77"/>
